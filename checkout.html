@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Payment & Address</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .checkout-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            min-height: 70vh;
+        }
+
+        .checkout-form-group {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .checkout-form-group h2 {
+            font-size: 24px;
+            color: sienna;
+            border-bottom: 2px solid wheat;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .payment-options div {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .payment-options div:hover {
+            background: floralwhite;
+        }
+
+        .payment-options input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        #card-details {
+            margin-top: 15px;
+            padding: 15px;
+            border-top: 1px dashed #ccc;
+            display: none;
+        }
+
+        .card-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card-row .input-wrapper {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-box">
+            <h1 class="logo-text">Bound <span>&</span> Found</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Browse</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="heading-container">
+        <h1 class="section-title">Finalize Your Order</h1>
+    </div>
+
+    <div class="checkout-container">
+        <form id="checkout-form">
+            <div class="checkout-form-group">
+                <h2>1. Shipping Information</h2>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address Line 1</label>
+                <input type="text" id="address" name="address" placeholder="Street Address, P.O. Box" required>
+
+                <label for="city">City / State / Zip</label>
+                <input type="text" id="city" name="city" placeholder="City, State, Zip Code" required>
+            </div>
+
+            <div class="checkout-form-group">
+                <h2>2. Select Payment Method</h2>
+                <div class="payment-options">
+                    <div>
+                        <input type="radio" id="cod" name="paymentMethod" value="cod" required checked>
+                        <label for="cod">Cash on Delivery (COD)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="card" name="paymentMethod" value="card">
+                        <label for="card">Credit / Debit Card</label>
+                    </div>
+                </div>
+
+                <div id="card-details">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX">
+                    
+                    <div class="card-row">
+                        <div class="input-wrapper">
+                            <label for="expiry">Expiry (MM/YY)</label>
+                            <input type="text" id="expiry" placeholder="01/26">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="add-cart-btn" style="width: 100%; margin-top: 20px;">
+                Confirm & Pay
+            </button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>All Rights Of Bound & Found Are Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

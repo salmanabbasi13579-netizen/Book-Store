@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order - Bound & Found</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Specific styles for the order page */
+        .cart-container {
+            padding: 40px 70px;
+            min-height: 70vh;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        .item-details {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .item-details img {
+            width: 60px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .item-info h4 {
+            color: saddlebrown;
+            font-size: 18px;
+        }
+        .item-info p {
+            color: dimgray;
+            font-size: 14px;
+        }
+        .item-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .item-price {
+            font-weight: 600;
+            color: #333;
+        }
+        .remove-btn {
+            background: #D9534F; /* Red color for removal */
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .remove-btn:hover {
+            background: #C9302C;
+        }
+        .cart-summary {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px solid sienna;
+            max-width: 400px;
+            margin-left: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .summary-total {
+            font-size: 20px;
+            font-weight: 700;
+            color: sienna;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .empty-cart {
+            text-align: center;
+            padding: 100px 0;
+            font-size: 20px;
+            color: dimgray;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-box">
+            <h1 class="logo-text">Bound <span>&</span> Found</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Browse</a></li>
+                <li><a class="active" href="order.html">Order</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="heading-container">
+        <h1 class="section-title">Your Current Book Order</h1>
+    </div>
+
+    <div class="cart-container">
+        <div id="cart-items-list">
+            </div>
+
+        <div id="cart-summary" class="cart-summary" style="display:none;">
+            <h2>Order Summary</h2>
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal"></span>
+            </div>
+            <div class="summary-line">
+                <span>Tax (5%):</span>
+                <span id="cart-tax"></span>
+            </div>
+            <div class="summary-total summary-line">
+                <span>Grand Total:</span>
+                <span id="cart-total"></span>
+            </div>
+            <button id="checkout-btn" class="add-cart-btn" style="width: 100%; margin-top: 20px;">
+                Proceed to Checkout
+            </button>
+        </div>
+        
+        <div id="empty-cart-message" class="empty-cart" style="display:none;">
+            Your cart is currently empty. Head over to the <a href="books.html" style="color: sienna;">Browse</a> page to find your next favorite book!
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>All Rights Of Bound & Found Are Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
