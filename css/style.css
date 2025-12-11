@@ -1,0 +1,456 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: floralwhite;
+    color: black;
+    scroll-behavior: smooth;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-img {
+    width: 45px;
+    height: 45px;
+}
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: sienna;
+}
+.logo-text span {
+    color: peru;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    color: dimgray;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.nav-links a:hover,
+.nav-links .active {
+    color: sienna;
+   font-weight: 600;
+}
+.hero {
+    background: wheat;
+    padding: 110px 60px;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    position: relative;
+}
+.hero-title {
+    font-size: 55px;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+    color: saddlebrown;
+}
+.hero-subtitle {
+    margin-top: 15px;
+    color: brown;
+    font-size: 18px;
+    max-width: 450px;
+}
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 32px;
+    background: sienna;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.hero-btn:hover {
+    background: chocolate;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: floralwhite;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+}
+.section-title {
+    text-align: center;
+    margin: 80px 0 35px;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    color: rgb(60, 38, 22);
+}
+.why {
+    padding: 40px 70px;
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.why-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+.why-card:hover {
+    transform: translateY(-8px);
+}
+.why-card h3 {
+    margin-bottom: 12px;
+    color: sienna;
+    font-size: 20px;
+}
+.featured {
+    padding: 40px 70px;
+}
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+.book-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+.book-card:hover {
+    transform: translateY(-10px);
+}
+.book-card img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.book-card h3 {
+    color: saddlebrown;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.book-card p {
+    color: dimgray;
+}
+.categories {
+    padding: 40px 70px;
+}
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+.cat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: saddlebrown;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.cat-card:hover {
+    background: sienna;
+    color: white;
+}
+.comments {
+    padding: 40px 70px;
+}
+.comments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.comments-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.comments-card p {
+    font-size: 15px;
+    color: dimgray;
+    margin-bottom: 10px;
+}
+.comments-card h4 {
+    text-align: right;
+    color: sienna;
+    font-weight: 600;
+}
+.updates {
+    padding: 60px 70px;
+    text-align: center;
+    background: seashell;
+    border-top: 2px solid lightgray;
+}
+.updates-text {
+    color: dimgray;
+    margin-bottom: 15px;
+}
+.updates-form input {
+    padding: 12px 20px;
+    width: 300px;
+    border-radius: 30px;
+    border: 1px solid silver;
+    outline: none;
+    margin-right: 10px;
+}
+
+.updates-form button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: sienna;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.updates-form button:hover {
+    background: chocolate;
+}
+.footer {
+    text-align: center;
+    padding: 25px;
+    background:black;
+    border-top: 2px solid #eee;
+    font-size: 15px;
+    margin-top: 40px;
+    color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: floralwhite;
+    color: black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: sienna;
+}
+.logo-text span {
+    color: peru;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 17px;
+    color: dimgray;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.nav-links a:hover,
+.nav-links .active {
+    color: sienna;
+    font-weight: 600;
+}
+.heading-container {
+    text-align: center;
+    margin: 60px 0 30px;
+}
+.section-title {
+    font-size: 34px;
+    font-family: 'Playfair Display', serif;
+    color: rgb(60, 38, 22);
+}
+.category {
+    padding: 20px 70px 50px;
+}
+.category h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Playfair Display', serif;
+    color: rgb(100, 57, 37);
+}
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+.book-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+}
+.book-card img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.book-card h3 {
+    color: saddlebrown;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.book-card p {
+    color: dimgray;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+.add-cart-btn {
+    margin-top: 12px;
+    padding: 10px 25px;
+    background: sienna;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-cart-btn:hover {
+    background: chocolate;
+}
+.about-hero {
+    background: wheat;
+    text-align: center;
+    padding: 100px 20px;
+    color: saddlebrown;
+    position: relative;
+}
+
+.about-hero h1 {
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-hero p {
+    margin-top: 10px;
+    color: brown;
+    font-size: 18px;
+}
+.about-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: floralwhite;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+}
+
+.about-container {
+    padding: 60px 70px;
+}
+
+.about-box {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.about-box p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: dimgray;
+    margin-bottom: 10px;
+}
+
+.about-grid {
+    margin-top: 20px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.team-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+}
+
+.team-card h3 {
+    color: sienna;
+    font-size: 20px;
+}
+
+.team-card p {
+    color: dimgray;
+    margin-top: 8px;
+}
+
